@@ -1,5 +1,6 @@
 import numpy as np
 
+## prompt for user imput and set numbers.
 print('If you like this program send LTC donations to the folloing address.\n\n')
 token_name = input('Enter the name of new tokens to create.\n')
 sending_address = input('Enter your sending address.\n')
@@ -31,17 +32,17 @@ def add_to_omni_txt():
     f.write("\n")
     f.close()
 
-## creates the first part of the omni command contaning a single data packet.
+## creates the first part of the omni command contaning the next data packet.
 def create_omni_command_d1():
     global omni_command_d1, array_number
     omni_command_d1 = "omni_sendissuancefixed " + '"' + sending_address + '" ' + "1 1 0 " + '"' + data_packet
 
-## creates the second part of the omni command contaning a single data packet.
+## creates the second part of the omni command contaning the next data packet.
 def create_omni_command_d2():
     global omni_command_d2, array_number
     omni_command_d2 = '" "' + data_packet
 
-## creates the third part of the omni command contaning a single data packet.
+## creates the third part of the omni command contaning the next data packet.
 def create_omni_command_d3():
     global omni_command_d3, array_number
     omni_command_d3 = '" "' + token_name + str(serial_number)[1:] + '" "' + token_url + '" "' + data_packet + '" "1"'
