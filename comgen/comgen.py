@@ -1,6 +1,6 @@
 import numpy as np
 
-print('If you like this program send LTC donations to the folloing address.\nMDUHFa18kKuCaGB3RdEHZ2GMbAAHVhgFCM\n')
+print('If you like this program send LTC donations to the folloing address.\n\n')
 token_name = input('Enter the name of new tokens to create.\n')
 sending_address = input('Enter your sending address.\n')
 array_number = 0
